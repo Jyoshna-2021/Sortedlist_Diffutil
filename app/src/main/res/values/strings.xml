@@ -3,4 +3,6 @@
     <string name="sort_by_name">sort_by_name</string>
     <string name="sort_by_rating">sort_by_rating</string>
     <string name="sort_by_birth">sort_by_birth</string>
+    <string name="add_values">ADD Values</string>
+    <string name="add_elements_to_the_list">Add elements to the list</string>
 </resources>
