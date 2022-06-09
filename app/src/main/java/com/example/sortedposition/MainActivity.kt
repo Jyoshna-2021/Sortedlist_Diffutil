@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 
 class MainActivity : AppCompatActivity() {
@@ -35,8 +36,15 @@ class MainActivity : AppCompatActivity() {
             val list = ArrayList<Place>(placesList)
             //creating new list from previous one
             //adding new place object into it
-            list.add((Place(" $names")))
+            if (names.isEmpty())
+            {
+                Toast.makeText(this,"enter an item",Toast.LENGTH_LONG).show()
+            }
+            else {
+                list.add((Place(" $names")))
+                getValue.text.clear()
 
+            }
             //passing it to our adapter or we can say AsyncListDiffer
             list.sortBy { it.placeName.uppercase() }
 
